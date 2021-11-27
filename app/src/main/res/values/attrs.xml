@@ -1,0 +1,13 @@
+<resources>
+    <declare-styleable name="SearchBar">
+        <attr name="searchBarHint" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="IconButton">
+        <attr name="isButtonEnabled" format="boolean" />
+        <attr name="isButtonCircular" format="boolean" />
+        <attr name="buttonIconBackground" format="color" />
+        <attr name="iconSource" format="reference" />
+        <attr name="iconButtonSrcColor" format="color" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--region Typography-->
+    <style name="Text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="Title" parent="Text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textColor">@color/color_labelPrimary</item>
+    </style>
+
+    <style name="Headline" parent="Text">
+        <item name="android:textSize">16dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
+        <item name="android:textColor">@color/color_labelPrimary</item>
+    </style>
+
+    <style name="Body" parent="Text">
+        <item name="android:textSize">15dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textColor">@color/color_labelPrimary</item>
+    </style>
+
+    <style name="SmallBody" parent="Text">
+        <item name="android:textSize">13dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textColor">@color/color_labelSecondary</item>
+    </style>
+
+    <style name="Subtext" parent="Text">
+        <item name="android:textSize">12dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textColor">@color/color_labelTertiary</item>
+    </style>
+
+    <style name="OverLine" parent="Text">
+        <item name="android:textSize">12dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
+        <item name="android:textColor">@color/color_labelSecondary</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <!--endregion -->
+
+    <!--region search bar-->
+    <style name="SearchBar">
+        <item name="android:colorControlActivated">@color/color_labelPrimary</item>
+    </style>
+    <!--endregion-->
+
+    <style name="INKRIconButton" parent="Theme.AppCompat.DayNight">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:scaleType">center</item>
+        <item name="buttonIconBackground">@color/color_fillTertiary</item>
+        <item name="iconButtonSrcColor">@color/color_systemGray</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="isButtonCircular">true</item>
+    </style>
+
+    <!--region Toolbar-->
+    <style name="ToolBarStyle" parent="ThemeOverlay.AppCompat.DayNight.ActionBar">
+        <item name="android:textColorSecondary">@color/color_labelPrimary</item>
+        <item name="android:textColorPrimary">@color/color_labelPrimary</item>
+        <item name="colorControlHighlight">@color/color_controlHighlight</item>
+        <item name="spinBars">true</item>
+    </style>
+
+    <style name="Toolbar" parent="Widget.AppCompat.ActionBar">
+        <item name="elevation">4dp</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="background">@color/color_background_4</item>
+        <item name="android:background">@color/color_background_4</item>
+        <item name="android:titleTextStyle">@style/Title</item>
+        <item name="titleTextStyle">@style/Title</item>
+        <item name="android:theme">@style/ToolBarStyle</item>
+    </style>
+    <!--endregion-->
+</resources>

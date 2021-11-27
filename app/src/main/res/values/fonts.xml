@@ -1,0 +1,4 @@
+<resources>
+    <string name="font_fontFamily_medium">sans-serif-medium</string>
+    <string name="font_fontFamily_regular">sans-serif</string>
+</resources>
