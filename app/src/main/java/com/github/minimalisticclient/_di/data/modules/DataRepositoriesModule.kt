@@ -7,6 +7,6 @@ import com.github.minimalisticclient.domain.repositories.UserRepository
 import org.koin.dsl.module
 
 val dataRepositoryModule = module {
-    single<UserRepository> { UserRepositoryImpl(apis = get(), userDao = get(), database = get()) }
+    single<UserRepository> { UserRepositoryImpl(apis = get(), userDao = get(), database = get(), gson = get()) }
     single<ReposRepository> { ReposRepositoryImpl(apis = get(), repoDao = get(), database = get()) }
 }

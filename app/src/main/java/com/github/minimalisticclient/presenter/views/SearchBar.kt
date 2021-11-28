@@ -80,14 +80,6 @@ class SearchBar : ConstraintLayout {
         MiscUtils.showKeyboard(context)
     }
 
-    fun updateSearchHint(res: Int) {
-        etSearchBar.setHint(res)
-    }
-
-    fun setText(text: String) {
-        etSearchBar.setText(text)
-    }
-
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         requestClearFocus()
@@ -102,14 +94,5 @@ class SearchBar : ConstraintLayout {
 
     fun setOnSubmitSearch(listener: () -> Unit) {
         onSubmitSearch = listener
-    }
-
-    fun addTextChangeListener(textWatcher: TextWatcher) {
-        etSearchBar?.addTextChangedListener(textWatcher)
-    }
-
-    fun focusView(): AppCompatEditText {
-        etSearchBar.requestFocus()
-        return etSearchBar
     }
 }

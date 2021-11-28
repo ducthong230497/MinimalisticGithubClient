@@ -27,12 +27,6 @@ data class DomainResult<out T>(val status: Status, val data: T?, val error: Thro
     }
 }
 
-suspend fun <T> Flow<DomainResult<T>>.firstSuccessOrError(): DomainResult<T> {
-    return firstOrNull { it.status == DomainResult.Status.ERROR || it.status == DomainResult.Status.SUCCESS } ?: DomainResult.error(
-        Exception("Empty data")
-    )
-}
-
 fun <T> Flow<DomainResult<T>>.filterSuccessOrError(): Flow<DomainResult<T>> {
     return filter { it.status == DomainResult.Status.ERROR || it.status == DomainResult.Status.SUCCESS }
 }

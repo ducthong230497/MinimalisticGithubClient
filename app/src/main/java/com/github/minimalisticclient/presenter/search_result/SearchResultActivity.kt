@@ -11,6 +11,7 @@ import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.minimalisticclient.R
+import com.github.minimalisticclient.presenter.search_result.adapter.FooterStateAdapter
 import com.github.minimalisticclient.presenter.search_result.adapter.UserListAdapter
 import kotlinx.android.synthetic.main.activity_search_result.*
 import kotlinx.coroutines.flow.collect
@@ -61,7 +62,10 @@ class SearchResultActivity: AppCompatActivity() {
         }
 
         rvSearchResult.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        rvSearchResult.adapter = adapter
+        rvSearchResult.setHasFixedSize(true)
+        rvSearchResult.adapter = adapter.withLoadStateFooter(
+            footer = FooterStateAdapter { adapter.retry() }
+        )
         adapter.addLoadStateListener { loadState ->
             when  {
                 loadState.source.refresh is LoadState.NotLoading && loadState.append.endOfPaginationReached && adapter.itemCount < 1 -> {

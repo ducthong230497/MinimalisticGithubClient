@@ -50,17 +50,6 @@ class IconButton : AppCompatImageButton {
         ta.recycle()
     }
 
-    fun setIconResource(res: Int) {
-        if (res == 0) {
-            setImageDrawable(null)
-            return
-        }
-
-        ContextCompat.getDrawable(context, res)?.let {
-            setIcon(it)
-        }
-    }
-
     fun setIcon(icon: Drawable?, shouldFilterColor: Boolean = false) {
         iconSource = icon
         if (iconSource != null) {
@@ -90,18 +79,10 @@ class IconButton : AppCompatImageButton {
         alpha = if (!enabled) 0.4f else 1f
     }
 
-    fun setIconSize(res: Int) {
-        setIconSize(resources.getDimensionPixelSize(res).toFloat())
-    }
-
     private fun setIconSize(size: Float) {
         drawable?.mutate()?.let {
             setImageDrawable(DrawableUtils.resize(it, resources, size))
         }
-    }
-
-    fun setIconColorResource(colorRes: Int) {
-        setIconColor(ContextCompat.getColor(context, colorRes))
     }
 
     fun setIconColor(@ColorInt color: Int) {

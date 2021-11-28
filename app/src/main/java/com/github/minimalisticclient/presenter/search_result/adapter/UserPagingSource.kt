@@ -2,27 +2,32 @@ package com.github.minimalisticclient.presenter.search_result.adapter
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.github.minimalisticclient.domain.entities.DomainResult
 import com.github.minimalisticclient.domain.entities.User
 import com.github.minimalisticclient.domain.repositories.UserRepository
 
-class PostDataSource(
+class UserPagingSource(
     private val query: String,
     private val userRepository: UserRepository
 ): PagingSource<Int, User>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, User> {
         try {
             val currentLoadingPageKey = params.key ?: 1
-            val response = userRepository.fetchUsers(query, currentLoadingPageKey)
-            val responseData = mutableListOf<User>()
+            val responseResult = userRepository.fetchUsers(query, currentLoadingPageKey)
 
-            responseData.addAll(response)
+            if (responseResult.status == DomainResult.Status.ERROR) {
+                return LoadResult.Error(responseResult.error ?: Exception("Failed to search users"))
+            }
 
-            val prevKey = if (currentLoadingPageKey == 1) null else currentLoadingPageKey - 1
+            val responseData = responseResult.data
+            val pageSize = (responseData?.totalCount ?: 0) / params.loadSize
+            val users = mutableListOf<User>()
+            users.addAll(responseData?.items?.map { it.toUser() } ?: emptyList())
 
             return LoadResult.Page(
-                data = responseData,
-                prevKey = prevKey,
-                nextKey = if (responseData.isEmpty()) null else currentLoadingPageKey.plus(1)
+                data = users,
+                prevKey = if (currentLoadingPageKey == 1) null else currentLoadingPageKey - 1,
+                nextKey = if (currentLoadingPageKey < pageSize) currentLoadingPageKey + 1 else null
             )
         } catch (e: Exception) {
             return LoadResult.Error(e)

@@ -23,7 +23,7 @@ class ReposRepositoryImpl(
             if (response.isSuccessful) {
                 return DomainResult.success(response.body()?.map { it.toRepo() })
             }
-            DomainResult.success(emptyList())
+            DomainResult.error(Exception("Failed to get user's repo"))
         } catch (e: Throwable) {
             e.printStackTrace()
             DomainResult.error(e)

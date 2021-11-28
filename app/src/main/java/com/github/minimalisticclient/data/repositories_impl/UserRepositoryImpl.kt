@@ -6,8 +6,11 @@ import com.github.minimalisticclient.data.database.UserEntity
 import com.github.minimalisticclient.data.database.daos.UserDao
 import com.github.minimalisticclient.data.network.GithubApis
 import com.github.minimalisticclient.domain.entities.DomainResult
+import com.github.minimalisticclient.domain.entities.ListUser
 import com.github.minimalisticclient.domain.entities.User
 import com.github.minimalisticclient.domain.repositories.UserRepository
+import com.google.gson.Gson
+import com.google.gson.JsonObject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
@@ -15,19 +18,22 @@ import kotlinx.coroutines.flow.map
 class UserRepositoryImpl(
     private val apis: GithubApis,
     private val userDao: UserDao,
-    private val database: AppDatabase
+    private val database: AppDatabase,
+    private val gson: Gson
 ) : UserRepository {
 
-    override suspend fun fetchUsers(query: String, page: Int): List<User> {
+    override suspend fun fetchUsers(query: String, page: Int): DomainResult<ListUser> {
         return try {
             val response = apis.searchUsers(query, page)
             if (response.isSuccessful) {
-                return response.body()?.items?.map { it.toUser() } ?: emptyList()
+                return DomainResult.success(response.body()?.toListUser())
             }
-            emptyList()
+            val jsonObject = gson.fromJson(response.errorBody()?.string(), JsonObject::class.java)
+            val message = jsonObject.get("message").asString
+            DomainResult.error(Exception(message))
         } catch (e: Throwable) {
             e.printStackTrace()
-            emptyList()
+            DomainResult.error(e)
         }
     }
 
@@ -37,7 +43,7 @@ class UserRepositoryImpl(
             if (response.isSuccessful) {
                 return DomainResult.success(response.body()?.toUser())
             }
-            DomainResult.success(null)
+            DomainResult.error(Exception("Failed to fetch user detail"))
         } catch (e: Throwable) {
             e.printStackTrace()
             DomainResult.error(e)

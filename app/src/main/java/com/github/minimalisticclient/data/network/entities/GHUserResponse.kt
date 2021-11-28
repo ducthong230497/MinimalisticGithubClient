@@ -11,8 +11,6 @@ data class GHUserResponse(
     @SerializedName("public_gists") val publicGists: Int?,
     @SerializedName("followers") val followers: Int?,
     @SerializedName("following") val following: Int?,
-//    @SerializedName("created_at") val createAt: Date?,
-//    @SerializedName("updated_at") val updateAt: Date?,
 ) {
     fun toUser(): User {
         return User(id, login, avatarUrl, publicRepos, publicGists, followers, following)
