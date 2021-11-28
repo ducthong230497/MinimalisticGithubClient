@@ -1,5 +1,6 @@
 package com.github.mininalisticclient.presenter.search_result.adapter
 
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.github.mininalisticclient.R
 import com.github.mininalisticclient.domain.entities.User
+import com.github.mininalisticclient.presenter.user_detail.UserDetailActivity
 
 class UserListAdapter: PagingDataAdapter<User, UserListAdapter.ViewHolder>(DataDiffer) {
     class ViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
@@ -20,12 +22,16 @@ class UserListAdapter: PagingDataAdapter<User, UserListAdapter.ViewHolder>(DataD
         fun bind(user: User?) {
             Glide.with(view.context).load(user?.avatarUrl).into(imvAvatar)
             tvName.text = user?.login
+            itemView.setOnClickListener {
+                (it.context as? Activity)?.run {
+                    user?.login?.let { UserDetailActivity.startActivity(this, it) }
+                }
+            }
         }
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val user = getItem(position)
-        holder.bind(user)
+        holder.bind(getItem(position))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

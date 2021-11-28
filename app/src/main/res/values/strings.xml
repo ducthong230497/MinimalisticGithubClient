@@ -4,4 +4,37 @@
     <string name="general_search">Search</string>
     <string name="general_no_result">No Result</string>
     <string name="search_empty_warning">Please enter something to search</string>
+    <string name="following_count">%d following</string>
+    <string name="repo_name">Name: %s</string>
+    <string name="repo_language">Language: %s</string>
+    <string name="repo_description">Description: %s</string>
+
+    <!--Plurals-->
+    <plurals name="follower_count">
+        <item quantity="zero">%d followers</item>
+        <item quantity="one">%d follower</item>
+        <item quantity="two">%d followers</item>
+        <item quantity="few">%d followers</item>
+        <item quantity="many">%d followers</item>
+        <item quantity="other">%d followers</item>
+    </plurals>
+
+    <plurals name="repos_count">
+        <item quantity="zero">%d public repos</item>
+        <item quantity="one">%d public repo</item>
+        <item quantity="two">%d public repos</item>
+        <item quantity="few">%d public repos</item>
+        <item quantity="many">%d public repos</item>
+        <item quantity="other">%d public repos</item>
+    </plurals>
+
+    <plurals name="gists_count">
+        <item quantity="zero">%d public gists</item>
+        <item quantity="one">%d public gist</item>
+        <item quantity="two">%d public gists</item>
+        <item quantity="few">%d public gists</item>
+        <item quantity="many">%d public gists</item>
+        <item quantity="other">%d public gists</item>
+    </plurals>
+
 </resources>

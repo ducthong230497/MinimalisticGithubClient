@@ -1,5 +1,7 @@
 package com.github.mininalisticclient._di.domain
 
-import org.koin.core.module.Module
+import com.github.mininalisticclient._di.domain.modules.domainDetailModule
 
-val domainModules = listOf<Module>()
+val domainModules = listOf(
+    domainDetailModule
+)

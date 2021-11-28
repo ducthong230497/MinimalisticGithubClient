@@ -16,7 +16,7 @@ class FooterStateAdapter: LoadStateAdapter<FooterStateAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, loadState: LoadState): ViewHolder {
         return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.layout_user_loading, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.layout_user_item_loading, parent, false)
         )
     }
 }

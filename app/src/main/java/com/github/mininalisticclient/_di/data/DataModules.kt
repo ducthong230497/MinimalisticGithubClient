@@ -1,10 +1,11 @@
 package com.github.mininalisticclient._di.data
 
+import com.github.mininalisticclient._di.data.modules.dataDaoModule
 import com.github.mininalisticclient._di.data.modules.dataNetworkModule
 import com.github.mininalisticclient._di.data.modules.dataRepositoryModule
-import org.koin.core.module.Module
 
-val dataModules = listOf<Module>(
+val dataModules = listOf(
     dataNetworkModule,
-    dataRepositoryModule
+    dataRepositoryModule,
+    dataDaoModule
 )

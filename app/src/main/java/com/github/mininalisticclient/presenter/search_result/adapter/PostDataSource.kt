@@ -12,7 +12,7 @@ class PostDataSource(
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, User> {
         try {
             val currentLoadingPageKey = params.key ?: 1
-            val response = userRepository.getUsers(query, currentLoadingPageKey)
+            val response = userRepository.fetchUsers(query, currentLoadingPageKey)
             val responseData = mutableListOf<User>()
 
             responseData.addAll(response)

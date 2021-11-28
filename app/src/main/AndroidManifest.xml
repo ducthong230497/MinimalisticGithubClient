@@ -24,6 +24,8 @@
 
         <activity android:name=".presenter.search_result.SearchResultActivity"
             android:theme="@style/Theme.MininalisticClient"/>
+        <activity android:name=".presenter.user_detail.UserDetailActivity"
+            android:theme="@style/Theme.MininalisticClient"/>
 
         <provider
             android:name="androidx.startup.InitializationProvider"
