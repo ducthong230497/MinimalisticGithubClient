@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/activity_user_detail.xml" value="0.335" />
         <entry key="app/src/main/res/layout/layout_repo_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/layout_user_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/layout_user_item_loading.xml" value="0.29572649572649573" />
         <entry key="app/src/main/res/layout/layout_user_loading.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/layout/view_search_bar.xml" value="0.2015625" />
       </map>

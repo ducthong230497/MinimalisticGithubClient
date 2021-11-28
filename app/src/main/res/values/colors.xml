@@ -9,44 +9,14 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="color_systemYellow">#FFCA28</color>
-    <color name="color_systemYellow_20">#33FFCA28</color>
-    <color name="color_systemOrange">#FF8F00</color>
-    <color name="color_systemRed">#F44336</color>
-    <color name="color_systemGreen">#00C853</color>
-    <color name="color_systemTeal">#00E5FF</color>
-    <color name="color_systemBlue">#2962FF</color>
-    <color name="color_systemIndigo">#3D5AFE</color>
-    <color name="color_systemPurple">#651FFF</color>
-    <color name="color_systemPink">#F50057</color>
-    <color name="color_fillPrimary">#29000000</color>
-    <color name="color_fillSecondary">#1F000000</color>
-    <color name="color_fillSecondary_solid">#E0E0E0</color>
     <color name="color_fillTertiary">#14000000</color>
-    <color name="color_fillTertiary_Solid">#E6E6E6</color>
-    <color name="color_fillQuarternary">#0A000000</color>
-    <color name="color_fillQuarternary_Solid">#E1E1E6</color>
     <color name="color_labelPrimary">#DE000000</color>
     <color name="color_labelSecondary">#99000000</color>
     <color name="color_labelTertiary">#61000000</color>
-    <color name="color_labelQuarternary">#29000000</color>
     <color name="color_divider">#1F000000</color>
     <color name="color_systemGray">#8E8E93</color>
-    <color name="color_systemGray2">#AEAEB2</color>
-    <color name="color_systemGray3">#C7C7CC</color>
-    <color name="color_systemGray4">#D1D1D6</color>
-    <color name="color_systemGray5">#E5E5EA</color>
     <color name="color_systemGray6">#F2F2F7</color>
     <color name="color_background">#FFFFFF</color>
-    <color name="color_background_1">#FFFFFF</color>
-    <color name="color_background_2">#FFFFFF</color>
-    <color name="color_background_3">#FFFFFF</color>
     <color name="color_background_4">#FFFFFF</color>
-    <color name="color_background_6">#FFFFFF</color>
-    <color name="color_background_8">#FFFFFF</color>
-    <color name="color_background_9">#FFFFFF</color>
-    <color name="color_background_12">#FFFFFF</color>
-    <color name="color_background_16">#FFFFFF</color>
-    <color name="color_background_24">#FFFFFF</color>
     <color name="color_controlHighlight">#1F000000</color>
 </resources>

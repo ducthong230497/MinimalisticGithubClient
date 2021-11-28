@@ -75,7 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="8dp"
-        android:background="@color/color_controlHighlight"
+        android:background="@color/color_divider"
         app:layout_constraintTop_toBottomOf="@id/txtPublicRepos"/>
 
     <androidx.recyclerview.widget.RecyclerView

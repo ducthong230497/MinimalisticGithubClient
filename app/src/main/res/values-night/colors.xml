@@ -1,43 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_systemYellow">#FFD54F</color>
-    <color name="color_systemYellow_20">#33FFCA28</color>
-    <color name="color_systemOrange">#FFA000</color>
-    <color name="color_systemRed">#EF5350</color>
-    <color name="color_systemGreen">#00E676</color>
-    <color name="color_systemTeal">#00E5FF</color>
-    <color name="color_systemBlue">#2979FF</color>
-    <color name="color_systemIndigo">#536DFE</color>
-    <color name="color_systemPurple">#7C4DFF</color>
-    <color name="color_systemPink">#FF4081</color>
-    <color name="color_fillPrimary">#29FFFFFF</color>
-    <color name="color_fillSecondary">#1FFFFFFF</color>
-    <color name="color_fillSecondary_solid">#3C3C3C</color>
-    <color name="color_fillTertiary">#14FFFFFF</color>
-    <color name="color_fillTertiary_Solid">#404040</color>
-    <color name="color_fillQuarternary">#0AFFFFFF</color>
-    <color name="color_fillQuarternary_Solid">#393939</color>
     <color name="color_labelPrimary">#DEFFFFFF</color>
     <color name="color_labelSecondary">#99FFFFFF</color>
     <color name="color_labelTertiary">#61FFFFFF</color>
-    <color name="color_labelQuarternary">#29FFFFFF</color>
     <color name="color_divider">#1FFFFFFF</color>
     <color name="color_systemGray">#8E8E93</color>
-    <color name="color_systemGray2">#636366</color>
-    <color name="color_systemGray3">#48484A</color>
-    <color name="color_systemGray4">#3A3A3C</color>
-    <color name="color_systemGray5">#2C2C2E</color>
     <color name="color_systemGray6">#1C1C1E</color>
     <color name="color_background">#121212</color>
-    <color name="color_background_1">#1E1E1E</color>
-    <color name="color_background_2">#232323</color>
-    <color name="color_background_3">#252525</color>
     <color name="color_background_4">#272727</color>
-    <color name="color_background_6">#2C2C2C</color>
-    <color name="color_background_8">#2E2E2E</color>
-    <color name="color_background_9">#313131</color>
-    <color name="color_background_12">#333333</color>
-    <color name="color_background_16">#363636</color>
-    <color name="color_background_24">#383838</color>
     <color name="color_controlHighlight">#1FFFFFFF</color>
 </resources>

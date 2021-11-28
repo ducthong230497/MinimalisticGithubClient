@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.github.mininalisticclient">
+    package="com.github.minimalisticclient">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,9 +11,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MininalisticClient">
+        android:theme="@style/Theme.MinimalisticClient">
         <activity
-            android:name=".presenter.main_activity.MainActivity"
+            android:name="com.github.minimalisticclient.presenter.main_activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,10 +22,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".presenter.search_result.SearchResultActivity"
-            android:theme="@style/Theme.MininalisticClient"/>
-        <activity android:name=".presenter.user_detail.UserDetailActivity"
-            android:theme="@style/Theme.MininalisticClient"/>
+        <activity
+            android:name="com.github.minimalisticclient.presenter.search_result.SearchResultActivity"
+            android:theme="@style/Theme.MinimalisticClient"/>
+        <activity
+            android:name="com.github.minimalisticclient.presenter.user_detail.UserDetailActivity"
+            android:theme="@style/Theme.MinimalisticClient"/>
 
         <provider
             android:name="androidx.startup.InitializationProvider"
@@ -33,7 +35,7 @@
             android:exported="false"
             tools:node="merge">
             <meta-data
-                android:name="com.github.mininalisticclient.app.AppInitializer"
+                android:name="com.github.minimalisticclient.app.AppInitializer"
                 android:value="androidx.startup" />
         </provider>
     </application>

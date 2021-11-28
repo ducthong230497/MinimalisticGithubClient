@@ -25,26 +25,6 @@
         <item name="android:lineSpacingExtra">2dp</item>
         <item name="android:textColor">@color/color_labelPrimary</item>
     </style>
-
-    <style name="SmallBody" parent="Text">
-        <item name="android:textSize">13dp</item>
-        <item name="android:lineSpacingExtra">2dp</item>
-        <item name="android:textColor">@color/color_labelSecondary</item>
-    </style>
-
-    <style name="Subtext" parent="Text">
-        <item name="android:textSize">12dp</item>
-        <item name="android:lineSpacingExtra">2dp</item>
-        <item name="android:textColor">@color/color_labelTertiary</item>
-    </style>
-
-    <style name="OverLine" parent="Text">
-        <item name="android:textSize">12dp</item>
-        <item name="android:lineSpacingExtra">2dp</item>
-        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
-        <item name="android:textColor">@color/color_labelSecondary</item>
-        <item name="android:textAllCaps">true</item>
-    </style>
     <!--endregion -->
 
     <!--region search bar-->

@@ -3,6 +3,10 @@
 
     <string name="general_search">Search</string>
     <string name="general_no_result">No Result</string>
+
+    <string name="activity_search_result_title">Search Result</string>
+    <string name="activity_user_detail_title">User Detail</string>
+
     <string name="search_empty_warning">Please enter something to search</string>
     <string name="following_count">%d following</string>
     <string name="repo_name">Name: %s</string>

@@ -17,12 +17,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.github.mininalisticclient.presenter.views.SearchBar
+        <com.github.minimalisticclient.presenter.views.SearchBar
             android:id="@+id/userSearchBar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             app:searchBarHint="@string/general_search" />
 
     </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/general_search"
+        android:textColor="@color/color_labelPrimary"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

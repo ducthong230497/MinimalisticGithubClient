@@ -25,7 +25,7 @@
         android:textColorHint="@color/color_labelTertiary"
         />
 
-    <com.github.mininalisticclient.presenter.views.IconButton
+    <com.github.minimalisticclient.presenter.views.IconButton
         android:id="@+id/icClearText"
         style="@style/INKRIconButton"
         app:layout_constraintTop_toTopOf="parent"
